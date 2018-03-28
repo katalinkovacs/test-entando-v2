@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE tiles-definitions PUBLIC
+	"-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN"
+	"http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+
+    <definition extends="layout.default" name="jpattendee.admin.Attendee.list">
+		<put-attribute name="title" value="jpattendee.title.attendeeManagement" />
+		<put-attribute name="body" value="/WEB-INF/plugins/jpattendee/apsadmin/jsp/attendee/attendee-list.jsp" />
+		<put-attribute name="extraResources" value="/WEB-INF/plugins/jpattendee/apsadmin/jsp/common/layouts/assets-more/attendee-list-extras.jsp"/>
+	</definition>
+    <definition extends="layout.default" name="jpattendee.admin.Attendee.entry">
+		<put-attribute name="title" value="jpattendee.title.attendeeManagement" />
+		<put-attribute name="body" value="/WEB-INF/plugins/jpattendee/apsadmin/jsp/attendee/attendee-entry.jsp" />
+		<put-attribute name="extraResources" value="/WEB-INF/plugins/jpattendee/apsadmin/jsp/common/layouts/assets-more/attendee-entry-extras.jsp"/>
+	</definition>
+    <definition extends="layout.default" name="jpattendee.admin.Attendee.trash">
+		<put-attribute name="title" value="jpattendee.title.attendeeManagement" />
+		<put-attribute name="body" value="/WEB-INF/plugins/jpattendee/apsadmin/jsp/attendee/attendee-trash.jsp" />
+		<put-attribute name="extraResources" value="/WEB-INF/plugins/jpattendee/apsadmin/jsp/common/layouts/assets-more/attendee-trash-extras.jsp"/>
+	</definition>
+
+    <definition extends="layout.default" name="jpattendee.admin.page.widget.Attendee.entry">
+		<put-attribute name="title" value="jpattendee.title.attendeeManagement" />
+		<put-attribute name="body" value="/WEB-INF/plugins/jpattendee/apsadmin/jsp/portal/specialwidget/attendee/attendee-config.jsp" />
+	</definition>
+
+</tiles-definitions>
+
+

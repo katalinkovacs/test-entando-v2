@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+		xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		xmlns:context="http://www.springframework.org/schema/context"
+		xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+				http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd" >
+
+	<bean id="jpattendeeAttendeePluginSubMenu" class="com.agiletec.apsadmin.system.plugin.PluginSubMenuContainer" >
+		<property name="subMenuFilePath"><value>/WEB-INF/plugins/jpattendee/apsadmin/jsp/common/layouts/subMenu.jsp</value></property>
+	</bean>
+
+	<bean id="jpattendeeAttendeeFinderAction" scope="prototype" 
+			class="org.entando.entando.plugins.jpattendee.apsadmin.attendee.AttendeeFinderAction" 
+			parent="abstractBaseAction" >
+		<property name="attendeeManager" ref="jpattendeeAttendeeManager" />
+	</bean>
+
+	<bean id="jpattendeeAttendeeAction" scope="prototype" 
+			class="org.entando.entando.plugins.jpattendee.apsadmin.attendee.AttendeeAction" 
+			parent="abstractBaseAction" >
+		<property name="attendeeManager" ref="jpattendeeAttendeeManager" />
+	</bean>
+
+
+	<bean id="jpattendeeAttendeeConfigAction" class="org.entando.entando.plugins.jpattendee.apsadmin.portal.specialwidget.attendee.AttendeeConfigAction"
+		parent="simpleWidgetAction" scope="prototype">
+		<property name="attendeeManager" ref="jpattendeeAttendeeManager" />
+	</bean>
+
+
+	<!-- INTERNAL_SERVLET -->
+	<bean id="jpattendeeAttendeeFinderFrontEndAction" scope="prototype" 
+			class="org.entando.entando.plugins.jpattendee.aps.internalservlet.attendee.AttendeeFinderFrontEndAction" 
+			parent="abstractBaseAction" >
+		<property name="attendeeManager" ref="jpattendeeAttendeeManager" />
+	</bean>
+	
+	<bean id="jpattendeeAttendeeFrontEndAction" scope="prototype" 
+			class="org.entando.entando.plugins.jpattendee.aps.internalservlet.attendee.AttendeeFrontEndAction" 
+			parent="abstractBaseAction" >
+		<property name="attendeeManager" ref="jpattendeeAttendeeManager" />
+	</bean>
+ 	
+ 	
+</beans>

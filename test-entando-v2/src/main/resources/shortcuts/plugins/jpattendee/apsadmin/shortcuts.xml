@@ -1,0 +1,15 @@
+<shortcut-def>
+	<shortcuts>
+		<shortcut id="jpattendee.Attendee.shortCut" requiredPermission="superuser" menusection="plugins" source="jpattendee">
+			<description key="jpattendee.Attendee.shortCut.list.shortDesc">Attendee list</description>
+			<longdesc key="jpattendee.Attendee.shortCut.list.longDesc">
+				<![CDATA[Attendee shortCut longDesc ]]>
+			</longdesc>
+			<url>
+				<param name="namespace">/do/jpattendee/Attendee</param>
+				<param name="actionName">list</param>
+			</url>
+		</shortcut>
+	</shortcuts>
+	
+</shortcut-def>

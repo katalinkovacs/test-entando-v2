@@ -1,0 +1,108 @@
+****************************************************************
+
+						Edo Report		
+								
+****************************************************************
+
+=== Command Line
+
+[Attendee, name:string-r30, lname:string-30r, age:int-r, remarks:string-150]
+
+
+
+=== List of geneated files that MUST be merged:
+----------------------------------------------------------------
+Total files: 0
+Total lines: 0
+
+
+=== List of geneated files:
+src\main\java\org\entando\entando\plugins\jpattendee\aps\internalservlet\attendee\AttendeeFinderFrontEndAction.java
+src\main\java\org\entando\entando\plugins\jpattendee\aps\internalservlet\attendee\AttendeeFrontEndAction.java
+src\main\java\org\entando\entando\plugins\jpattendee\aps\internalservlet\attendee\attendeeFront.xml
+src\main\java\org\entando\entando\plugins\jpattendee\aps\system\init\servdb\Attendee.java
+src\main\java\org\entando\entando\plugins\jpattendee\aps\system\services\attendee\Attendee.java
+src\main\java\org\entando\entando\plugins\jpattendee\aps\system\services\attendee\AttendeeDAO.java
+src\main\java\org\entando\entando\plugins\jpattendee\aps\system\services\attendee\AttendeeManager.java
+src\main\java\org\entando\entando\plugins\jpattendee\aps\system\services\attendee\IAttendeeDAO.java
+src\main\java\org\entando\entando\plugins\jpattendee\aps\system\services\attendee\IAttendeeManager.java
+src\main\java\org\entando\entando\plugins\jpattendee\aps\system\services\attendee\api\AttendeeListResponse.java
+src\main\java\org\entando\entando\plugins\jpattendee\aps\system\services\attendee\api\AttendeeListResponseResult.java
+src\main\java\org\entando\entando\plugins\jpattendee\aps\system\services\attendee\api\AttendeeResponse.java
+src\main\java\org\entando\entando\plugins\jpattendee\aps\system\services\attendee\api\AttendeeResponseResult.java
+src\main\java\org\entando\entando\plugins\jpattendee\aps\system\services\attendee\api\JAXBAttendee.java
+src\main\java\org\entando\entando\plugins\jpattendee\aps\system\services\attendee\event\AttendeeChangedEvent.java
+src\main\java\org\entando\entando\plugins\jpattendee\aps\system\services\attendee\event\AttendeeChangedObserver.java
+src\main\java\org\entando\entando\plugins\jpattendee\aps\tags\AttendeeListTag.java
+src\main\java\org\entando\entando\plugins\jpattendee\aps\tags\AttendeeTag.java
+src\main\java\org\entando\entando\plugins\jpattendee\apsadmin\attendee\AttendeeAction-validation.xml
+src\main\java\org\entando\entando\plugins\jpattendee\apsadmin\attendee\AttendeeAction.java
+src\main\java\org\entando\entando\plugins\jpattendee\apsadmin\attendee\AttendeeFinderAction.java
+src\main\java\org\entando\entando\plugins\jpattendee\apsadmin\attendee\attendee.xml
+src\main\java\org\entando\entando\plugins\jpattendee\apsadmin\attendee\package_en.properties
+src\main\java\org\entando\entando\plugins\jpattendee\apsadmin\attendee\package_it.properties
+src\main\java\org\entando\entando\plugins\jpattendee\apsadmin\global-messages_en.properties
+src\main\java\org\entando\entando\plugins\jpattendee\apsadmin\global-messages_it.properties
+src\main\java\org\entando\entando\plugins\jpattendee\apsadmin\portal\specialwidget\attendee\AttendeeConfigAction.java
+src\main\java\org\entando\entando\plugins\jpattendee\apsadmin\portal\specialwidget\attendee\attendeeSpecialWidget.xml
+src\main\java\org\entando\entando\plugins\jpattendee\apsadmin\portal\specialwidget\attendee\package_en.properties
+src\main\java\org\entando\entando\plugins\jpattendee\apsadmin\portal\specialwidget\attendee\package_it.properties
+src\main\resources\api\plugins\jpattendee\aps\apiMethods.xml
+src\main\resources\component\plugins\jpattendee\component.xml
+src\main\resources\entando-struts-plugin.xml
+src\main\resources\shortcuts\plugins\jpattendee\apsadmin\shortcuts.xml
+src\main\resources\spring\plugins\jpattendee\aps\managers\jpattendeeAttendeeManagersConfig.xml
+src\main\resources\spring\plugins\jpattendee\apsadmin\jpattendeeAttendeeActionsConfig.xml
+src\main\resources\sql\plugins\jpattendee\port_data_production.sql
+src\main\resources\sql\plugins\jpattendee\serv_data_production.sql
+src\main\tld\plugins\jpattendee\jpattendee-core.tld
+src\main\webapp\WEB-INF\plugins\jpattendee\aps\jsp\internalservlet\attendee\frontend-attendee-entry.jsp
+src\main\webapp\WEB-INF\plugins\jpattendee\aps\jsp\internalservlet\attendee\frontend-attendee-error.jsp
+src\main\webapp\WEB-INF\plugins\jpattendee\aps\jsp\internalservlet\attendee\frontend-attendee-list.jsp
+src\main\webapp\WEB-INF\plugins\jpattendee\aps\jsp\internalservlet\attendee\frontend-attendee-trash.jsp
+src\main\webapp\WEB-INF\plugins\jpattendee\aps\jsp\widgets\jpattendeeAttendee.jsp
+src\main\webapp\WEB-INF\plugins\jpattendee\apsadmin\jpattendee-tiles.xml
+src\main\webapp\WEB-INF\plugins\jpattendee\apsadmin\jsp\attendee\attendee-entry.jsp
+src\main\webapp\WEB-INF\plugins\jpattendee\apsadmin\jsp\attendee\attendee-list.jsp
+src\main\webapp\WEB-INF\plugins\jpattendee\apsadmin\jsp\attendee\attendee-trash.jsp
+src\main\webapp\WEB-INF\plugins\jpattendee\apsadmin\jsp\common\layouts\assets-more\attendee-entry-extras.jsp
+src\main\webapp\WEB-INF\plugins\jpattendee\apsadmin\jsp\common\layouts\assets-more\attendee-list-extras.jsp
+src\main\webapp\WEB-INF\plugins\jpattendee\apsadmin\jsp\common\layouts\assets-more\attendee-trash-extras.jsp
+src\main\webapp\WEB-INF\plugins\jpattendee\apsadmin\jsp\common\layouts\subMenu.jsp
+src\main\webapp\WEB-INF\plugins\jpattendee\apsadmin\jsp\portal\specialwidget\attendee\attendee-config.jsp
+src\test\java\org\entando\entando\plugins\jpattendee\JpattendeeConfigTestUtils.java
+src\test\java\org\entando\entando\plugins\jpattendee\aps\JpattendeeBaseTestCase.java
+src\test\java\org\entando\entando\plugins\jpattendee\aps\system\services\TestAttendeeManager.java
+src\test\java\org\entando\entando\plugins\jpattendee\apsadmin\JpattendeeApsAdminBaseTestCase.java
+src\test\java\org\entando\entando\plugins\jpattendee\apsadmin\attendee\TestAttendeeAction.java
+src\test\java\org\entando\entando\plugins\jpattendee\apsadmin\attendee\TestAttendeeFinderAction.java
+src\test\resources\sql\plugins\jpattendee\port_data_test.sql
+src\test\resources\sql\plugins\jpattendee\serv_data_test.sql
+----------------------------------------------------------------
+Total files: 61
+Total lines: 3354
+
+
+
+
+
+=== Revert *port inserts
+
+DELETE FROM localstrings where keycode = 'jpattendee_ATTENDEE_ID'; 
+DELETE FROM localstrings where keycode = 'jpattendee_ATTENDEE_NAME'; 
+DELETE FROM localstrings where keycode = 'jpattendee_ATTENDEE_LNAME'; 
+DELETE FROM localstrings where keycode = 'jpattendee_ATTENDEE_AGE'; 
+DELETE FROM localstrings where keycode = 'jpattendee_ATTENDEE_REMARKS'; 
+DELETE FROM localstrings where keycode = 'jpattendee_ATTENDEE_ACTIONS'; 
+DELETE FROM localstrings where keycode = 'jpattendee_ATTENDEE_NEW'; 
+DELETE FROM localstrings where keycode = 'jpattendee_ATTENDEE_EDIT'; 
+DELETE FROM localstrings where keycode = 'jpattendee_ATTENDEE_TRASH'; 
+DELETE FROM localstrings where keycode = 'jpattendee_ATTENDEE_TRASH_CONFIRM'; 
+DELETE FROM localstrings where keycode = 'jpattendee_ATTENDEE_SEARCH_ATTENDEE'; 
+
+
+DELETE FROM widgetcatalog where code = 'jpattendeeAttendee_list_form';
+DELETE FROM widgetcatalog where code = 'jpattendeeAttendee';
+
+
+

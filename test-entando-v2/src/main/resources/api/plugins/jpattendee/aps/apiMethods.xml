@@ -1,0 +1,51 @@
+<apiMethodDefinitions>
+
+	<resource name="attendees">
+        <description>Return the attendee list</description>
+        <source pluginCode="jpattendee">plugins</source>
+		<method httpMethod="GET" active="true" canSpawnOthers="true">
+			<description>Return the attendees list</description>
+			<springBean name="jpattendeeAttendeeManager" method="getAttendeesForApi" />
+			<responseClass>org.entando.entando.plugins.jpattendee.aps.system.services.attendee.api.AttendeeListResponse</responseClass>
+			<!-- 
+			<parameters>
+			</parameters>
+			-->
+		</method>
+	</resource>
+  
+    <resource name="attendee">
+        <description>The attendee</description>
+        <source pluginCode="jpattendee">plugins</source>
+        <method httpMethod="GET" active="true" canSpawnOthers="true">
+            <description>Return a attendee by id</description>
+            <springBean name="jpattendeeAttendeeManager" method="getAttendeeForApi" />
+            <responseClass>org.entando.entando.plugins.jpattendee.aps.system.services.attendee.api.AttendeeResponse</responseClass>
+            <parameters>
+                <parameter key="id" required="true">
+                    <description>The id of the attendee to return</description>
+                </parameter>
+            </parameters>
+        </method>
+        <method httpMethod="POST" active="true" requiredAuth="true" requiredPermission="superuser">
+            <description>Add a attendee</description>
+            <springBean name="jpattendeeAttendeeManager" method="addAttendeeForApi" />
+            <expectedType>org.entando.entando.plugins.jpattendee.aps.system.services.attendee.api.JAXBAttendee</expectedType>
+        </method>
+        <method httpMethod="PUT" active="true" requiredAuth="true" requiredPermission="superuser">
+            <description>Update a attendee</description>
+            <springBean name="jpattendeeAttendeeManager" method="updateAttendeeForApi" />
+            <expectedType>org.entando.entando.plugins.jpattendee.aps.system.services.attendee.api.JAXBAttendee</expectedType>
+        </method>
+        <method httpMethod="DELETE" active="true" requiredAuth="true" requiredPermission="superuser">
+            <description>Delete a attendee by id</description>
+            <springBean name="jpattendeeAttendeeManager" method="deleteAttendeeForApi" />
+            <parameters>
+                <parameter key="id" required="true">
+                    <description>The id of the attendee to delete</description>
+                </parameter>
+            </parameters>
+        </method>
+    </resource>
+	
+</apiMethodDefinitions>

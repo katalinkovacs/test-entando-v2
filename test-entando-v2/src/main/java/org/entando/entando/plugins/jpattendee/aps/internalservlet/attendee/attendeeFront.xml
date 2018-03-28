@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+    "http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+
+    <package name="jpattendee_do/FrontEnd/jpattendee/Attendee" namespace="/do/FrontEnd/jpattendee/Attendee" extends="entando-front-default">
+		
+		<global-results>
+			<result name="failure" type="guiFragment">
+				<param name="code">jpattendee_is_front_Attendee_error</param>
+				<param name="jspLocation">/WEB-INF/plugins/jpattendee/aps/jsp/internalservlet/attendee/frontend-attendee-error.jsp</param>
+			</result>
+    	</global-results>
+		
+    	<action name="list" class="jpattendeeAttendeeFinderFrontEndAction">
+    		<result type="guiFragment">
+				<param name="code">jpattendee_is_front_Attendee_list</param>
+				<param name="jspLocation">/WEB-INF/plugins/jpattendee/aps/jsp/internalservlet/attendee/frontend-attendee-list.jsp</param>
+			</result>
+			<interceptor-ref name="entandoFrontEndFreeStack"></interceptor-ref>
+        </action>
+        
+    	<action name="search" class="jpattendeeAttendeeFinderFrontEndAction">
+            <result type="guiFragment">
+				<param name="code">jpattendee_is_front_Attendee_list</param>
+				<param name="jspLocation">/WEB-INF/plugins/jpattendee/aps/jsp/internalservlet/attendee/frontend-attendee-list.jsp</param>
+			</result>
+			<interceptor-ref name="entandoFrontEndFreeStack"></interceptor-ref>
+        </action>
+    	
+        <action name="new" class="jpattendeeAttendeeFrontEndAction" method="newAttendee">
+            <result type="guiFragment">
+				<param name="code">jpattendee_is_front_Attendee_entry</param>
+				<param name="jspLocation">/WEB-INF/plugins/jpattendee/aps/jsp/internalservlet/attendee/frontend-attendee-entry.jsp</param>
+			</result>
+			<interceptor-ref name="entandoFrontEndFreeStack"></interceptor-ref>
+        </action>
+    	
+        <action name="edit" class="jpattendeeAttendeeFrontEndAction" method="edit">
+            <result type="guiFragment">
+				<param name="code">jpattendee_is_front_Attendee_entry</param>
+				<param name="jspLocation">/WEB-INF/plugins/jpattendee/aps/jsp/internalservlet/attendee/frontend-attendee-entry.jsp</param>
+			</result>
+			<result name="input" type="frontRedirectAction">
+				<param name="actionName">list</param>
+			</result>
+        	<interceptor-ref name="entandoFrontEndFreeStack"></interceptor-ref>
+        </action>
+        
+        <action name="save" class="jpattendeeAttendeeFrontEndAction" method="save">
+        	<result name="input" type="guiFragment">
+				<param name="code">jpattendee_is_front_Attendee_entry</param>
+				<param name="jspLocation">/WEB-INF/plugins/jpattendee/aps/jsp/internalservlet/attendee/frontend-attendee-entry.jsp</param>
+			</result>
+			<result type="frontRedirectAction">
+				<param name="actionName">list</param>
+			</result>
+        	<interceptor-ref name="entandoFrontEndFreeValidationStack"></interceptor-ref>
+        </action>
+		
+    	<action name="trash" class="jpattendeeAttendeeFrontEndAction" method="trash">
+            <result type="guiFragment">
+				<param name="code">jpattendee_is_front_Attendee_trash</param>
+				<param name="jspLocation">/WEB-INF/plugins/jpattendee/aps/jsp/internalservlet/attendee/frontend-attendee-trash.jsp</param>
+			</result>
+			<result name="input" type="frontRedirectAction">
+				<param name="actionName">list</param>
+			</result>
+        	<interceptor-ref name="entandoFrontEndFreeStack"></interceptor-ref>
+        </action>
+        
+    	<action name="delete" class="jpattendeeAttendeeFrontEndAction" method="delete">
+        	<result type="frontRedirectAction">
+				<param name="actionName">list</param>
+			</result>
+        	<interceptor-ref name="entandoFrontEndFreeStack"></interceptor-ref>
+        </action>
+    	
+    </package>
+   
+</struts>
